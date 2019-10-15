@@ -12,7 +12,7 @@ module.exports = {
 		const c = require(site_root + "deploy/console.js");
 
 
-		const remove_dirs = ["deploy", "node_modules"];
+		const remove_dirs = ["deploy"];
 		const remove_files = [".travis.yaml"];
 
 		//Must have slashes after, and not before
