@@ -5,12 +5,13 @@
 	"author": "Anton Juul-Naber",
 	"license": "GPL-3.0",
 	"dependencies": {
-		"eslint": "^6",
-		"minify": "^4"
 	},
 	"devDependencies": {
-		"rimraf": "^3",
+		"minify": "^4",
+		"eslint": "^6",
+		"puppeteer": "^1",
 		"server": "^1",
-		"puppeteer": "^1"
+		"rimraf": "^3",
+		"replace-in-file": "^4"
 	}
 }

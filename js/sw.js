@@ -1,6 +1,6 @@
 "use strict";
 
-let currentCache = "offline-20191013";
+let currentCache = "!travis_insert_id!";
 let urlsToCache = [
 	"/manifest.min.json",
 	"/",
