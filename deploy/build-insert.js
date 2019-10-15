@@ -6,7 +6,7 @@ module.exports = {
 		const fs = require("fs");
 		const path = require("path");
 		const replace = require("replace-in-file");
-		const c = require(__dirname + "/deploy/console.js");
+		const c = require(__dirname + "/console.js");
 		
 		const rpl_sw_cache_id = replace({
 			files: __dirname + "/../js/sw.js",
