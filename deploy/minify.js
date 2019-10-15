@@ -13,7 +13,7 @@ module.exports = {
 
 
 		const remove_dirs = ["deploy"];
-		const remove_files = [".travis.yaml"];
+		const remove_files = [".travis.yml"];
 
 		//Must have slashes after, and not before
 		const minify_dirs = ["", "css/", "js/", "data/"];
