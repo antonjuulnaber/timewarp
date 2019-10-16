@@ -31,7 +31,7 @@ module.exports = {
 		for(const dir of minify_dirs){
 			console.log(path.join(site_root, dir));
 
-					fs.readdir(path.join(site_root, dir), (e, files) => {	
+					fs.readdir(path.join(site_root, dir) + "/", (e, files) => {	
 						for(const file of files){
 							let p = path.extname(file).toLowerCase();
 							if(p === ".html" || p === ".css" || p === ".js"){
