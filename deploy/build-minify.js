@@ -32,6 +32,7 @@ module.exports = {
 			console.log(path.join(site_root, dir));
 
 					fs.readdir(path.join(site_root, dir) + "/", (e, files) => {	
+						console.log(files);
 						for(const file of files){
 							let p = path.extname(file).toLowerCase();
 							if(p === ".html" || p === ".css" || p === ".js"){
