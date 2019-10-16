@@ -8,17 +8,19 @@ module.exports = {
 		
 		const fs = require("fs");
 		const crypto = require("crypto");
-		/*
+		
 		c.log("Inserting serviceworker unique cache id");
 		
 		let file = c.path("../js/sw.js");
 		fs.readFile(file, "utf-8", (e, data) => {
+			console.log(data);
+			console.log(data.replace("\"!travis_insert_id!\"", "\"cache-" + crypto.randomBytes(5).toString('hex'));
 			if(e) c.fail(e);
 			fs.writeFile(file, data.replace("\"!travis_insert_id!\"", "\"cache-" + crypto.randomBytes(5).toString('hex') + "\""), e => {
 				if(e) c.fail(e);
 			});
 		});
-		*/
+		
 	}
 	
 }
