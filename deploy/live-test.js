@@ -40,7 +40,7 @@ module.exports = {
 		await page.keyboard.press("Enter");
 
 
-		const result = await page.evaluate("return document.querySelector(\"#result.output\").value;");
+		const result = await page.evaluate("document.querySelector(\"#result.output\").value;");
 		
 		c.log(result, "info");
 
