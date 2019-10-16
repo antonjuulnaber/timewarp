@@ -15,7 +15,7 @@ module.exports = {
 		const remove_dirs = ["deploy"];
 		const remove_files = [".travis.yml"];
 
-		const minify_dirs = ["", "/css", "/js", "/data"];
+		const minify_dirs = ["", "css/", "js/", "data/"];
 
 
 		for(const dir of remove_dirs){
@@ -29,11 +29,9 @@ module.exports = {
 		}
 
 		for(const dir of minify_dirs){
-			console.log(path.join(site_root, dir));
 			fs.stat(site_root + dir, e => {
 				if(!e){
-					fs.readdir(site_root + dir, (e, files) => {	
-						console.log(files);
+					fs.readdir(site_root + dir, (e, files) => {
 						for(const file of files){
 							let p = path.extname(file).toLowerCase();
 							if(p === ".html" || p === ".css" || p === ".js"){
