@@ -41,12 +41,12 @@ module.exports = {
 				const p = path.extname(file).toLowerCase();
 				if(p === ".js" && dir.type === "web"){
 					c.log("Linting " + path.join(dir.path, file));
-					c.log(fs.readFileSync(path.join(site_root, dir.path, file)));
-					c.log(lint_rules_web);
-					c.log(linter.verify("//test", lint_rules_web), "info");
+					const data = fs.readFileSync(path.join(site_root, dir.path, file));
+					c.log(linter.verify(data, lint_rules_web), "info");
 				}else if(p === ".js" && dir.type === "node"){
 					c.log("Linting " + path.join(dir.path, file));
-					c.log(linter.verify(fs.readFileSync(path.join(site_root, dir.path, file)), lint_rules_node), "info");
+					const data = fs.readFileSync(path.join(site_root, dir.path, file));
+					c.log(linter.verify(data, lint_rules_node), "info");
 				}
 			}
 		}
