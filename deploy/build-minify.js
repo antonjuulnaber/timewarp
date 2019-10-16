@@ -21,12 +21,12 @@ module.exports = {
 
 		for(const dir of remove_dirs){
 		  c.log("Removing /" + dir);
-		  rimraf(site_root + dir, [], e => {if(e) c.log("Could not remove file: " + e, false);});
+		  rimraf(path.join(site_root + dir), [], e => {if(e) c.log("Could not remove file: " + e, false);});
 		}
 
 		for(const file of remove_files){
 		  c.log("Removing " + file);
-		  fs.unlink(site_root + file, e => {if(e) c.log("Could not remove file: " + e, false);});
+		  fs.unlink(path.join(site_root, file), e => {if(e) c.log("Could not remove file: " + e, false);});
 		}
 
 		for(const dir of minify_dirs){
