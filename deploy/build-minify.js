@@ -15,7 +15,8 @@ module.exports = {
 		const remove_dirs = ["deploy"];
 		const remove_files = [".travis.yml"];
 
-		const minify_dirs = ["/", "/css", "/js", "/data"];
+		//const minify_dirs = ["/", "/css", "/js", "/data"];
+		const minify_dirs = ["/", "/css", "/data"];
 
 
 		for(const dir of remove_dirs){
