@@ -34,6 +34,9 @@ module.exports = {
 					fs.readdir(path.join(site_root, dir), (e, files) => {	
 						for(const file of files){
 							let p = path.extname(file).toLowerCase();
+											let file = c.path("../js/sw.js");
+											fs.readFile(file, "utf-8", (e, data) => {
+											console.log(data);});
 							if(p === ".html" || p === ".css" || p === ".js"){
 								c.log("Minifying " + path.join(dir, file));
 								minify(path.join(site_root, dir, file)).then(minified => {
