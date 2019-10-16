@@ -20,12 +20,12 @@ module.exports = {
 
 		for(const dir of remove_dirs){
 		  c.log("Removing " + dir);
-		  rimraf(path.join(site_root, dir), [], e => {if(e) c.log("Could not remove directory: " + e, false);});
+		  rimraf.sync(path.join(site_root, dir));
 		}
 
 		for(const file of remove_files){
 		  c.log("Removing " + file);
-		  fs.unlink(path.join(site_root, file), e => {if(e) c.log("Could not remove file: " + e, false);});
+		  fs.unlinkSync(path.join(site_root, file));
 		}
 
 		for(const dir of minify_dirs){
@@ -34,8 +34,6 @@ module.exports = {
 					fs.readdir(path.join(site_root, dir), (e, files) => {	
 						for(const file of files){
 							let p = path.extname(file).toLowerCase();
-											fs.readFile(c.path("../js/sw.js"), "utf-8", (e, data) => {
-											console.log(data);});
 							if(p === ".html" || p === ".css" || p === ".js"){
 								c.log("Minifying " + path.join(dir, file));
 								minify(path.join(site_root, dir, file)).then(minified => {

@@ -1,7 +1,7 @@
 "use strict";
 
-let currentCache = "!travis_insert_id!";
-let urlsToCache = [
+const currentCache = "!travis_insert_id!";
+const urlsToCache = [
 	"/manifest.json",
 	"/",
 	"/css/main.css",
