@@ -12,7 +12,7 @@ async function parsePaste(event){
 	let match = (/(\b|\s|\D|^)(?<hour>[01]\d(?=[:;.,_ ])|2[0-3](?=[:;.,_ ])|\d(?=[:;.,_ ])|0(?=[0-5]\d)|[01]\d|2[0-3]|\d)[:;.,_\s]{0,3}(?<minute>[0-5]\d|\d?)(\b|\s|\D|$)/m).exec(event.clipboardData.getData('Text')) || {groups: "hour"};
 	let input = document.activeElement;
 	
-	if(input.tagName == "INPUT" && input.classList.contains("input") && match.groups.hour){
+	if(input.tagName === "INPUT" && input.classList.contains("input") && match.groups.hour){
 		input.value = p(match.groups.hour) + ":" + p(match.groups.minute||"00");
 		input.dispatchEvent(new Event("input"));
 	}
