@@ -4,8 +4,6 @@
 	"homepage": "https://antonjuulnaber.github.io/timewarp/",
 	"author": "Anton Juul-Naber",
 	"license": "GPL-3.0",
-	"dependencies": {
-	},
 	"devDependencies": {
 		"minify": "^4",
 		"eslint": "^6",
