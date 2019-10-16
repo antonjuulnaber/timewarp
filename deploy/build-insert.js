@@ -3,7 +3,8 @@
 module.exports = {
 	
 	run: () => {
-		const c = require("./deploy/controls.js");
+		const path = require("path");
+		const c = require(path.join(__dirname + "controls.js"));
 		
 		const replace = require("replace-in-file");
 		const crypto = require("crypto");

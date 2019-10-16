@@ -1,5 +1,6 @@
 "use strict";
-const c = require("./deploy/controls.js");
+const path = require("path");
+const c = require(path.join(__dirname + "controls.js"));
 
 const live = require(c.path("live-test.js"));
 
