@@ -8,6 +8,7 @@ jobs:
     - name: "test runtime environment"
       script: "node deploy/run-live-source-test.js"
     - stage: "build & deploy"
+      if: type != pull_request
       name: "insert, minify, push"
       script: "node deploy/run-build.js"
       deploy:
@@ -20,6 +21,7 @@ jobs:
         on:
           branch: source
     - stage: "test production"
+      if: type != pull_request
       name: "test runtime environment"
       script: "node deploy/run-live-prod-test.js"
 branches:
