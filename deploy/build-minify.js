@@ -29,6 +29,7 @@ module.exports = {
 		}
 
 		for(const dir of minify_dirs){
+			console.log(path.join(site_root, dir));
 			fs.stat(path.join(site_root, dir), e => {
 				if(!e){
 					fs.readdir(path.join(site_root, dir), (e, files) => {	
