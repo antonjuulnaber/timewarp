@@ -37,14 +37,14 @@ module.exports = {
 							let p = path.extname(file).toLowerCase();
 							if(p === ".html" || p === ".css" || p === ".js"){
 								c.log("Minifying " + dir + file);
-								minify(site_root + dir + file).then(minified => {
-									fs.writeFile(site_root + dir + file, minified, e => {if(e) c.fail(e);});
+								minify(path.join(site_root, dir, file)).then(minified => {
+									fs.writeFile(path.join(site_root, dir, file), minified, e => {if(e) c.fail(e);});
 								}).catch(e => {c.fail(e);});
 							}else if(p === ".json"){
 								c.log("Minifying " + dir + file);
-								fs.readFile(site_root + dir + file, "utf-8", (e, data) => {
+								fs.readFile(path.join(site_root, dir, file), "utf-8", (e, data) => {
 									if(e) c.fail(e);
-									fs.writeFile(file, JSON.stringify(JSON.parse(data)), e => {if(e) c.fail(e);});
+									fs.writeFile(path.join(site_root, dir, file), JSON.stringify(JSON.parse(data)), e => {if(e) c.fail(e);});
 								});
 							}
 						}
