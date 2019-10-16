@@ -12,7 +12,7 @@ module.exports = {
 		const minify = require("minify");
 
 
-		const remove_dirs = ["deploy"];
+		const remove_dirs = ["/deploy"];
 		const remove_files = [".travis.yml"];
 
 		const minify_dirs = ["/", "/css", "/js", "/data"];
@@ -40,7 +40,7 @@ module.exports = {
 					}).catch(e => {c.fail("Failed to minify" + path.join(dir, file) + ": " + e);});
 				}else if(p === ".json"){
 					c.log("Minifying " + path.join(dir, file));
-					fs.writeFileSync(file, JSON.stringify(JSON.parse(fs.readFileSync(path.join(site_root, dir, file));
+					fs.writeFileSync(file, JSON.stringify(JSON.parse(fs.readFileSync(path.join(site_root, dir, file)))));
 				}
 			}
 		}
