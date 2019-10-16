@@ -2,49 +2,48 @@
 
 module.exports = {
 	
-	run: () => {
-		const site_root = "/home/travis/build/antonjuulnaber/timewarp/";
+	run: () => {		
+		const path = require('path');
+		const c = require(path.join(__dirname + "controls.js"));
+		const site_root = c.path("..");
 
 		const fs = require("fs");
-		const path = require('path');
 		const rimraf = require("rimraf");
 		const minify = require("minify");
-		const c = require(site_root + "deploy/controls.js");
 
 
 		const remove_dirs = ["deploy"];
 		const remove_files = [".travis.yml"];
 
-		//Must have slashes after, and not before
-		const minify_dirs = ["", "css/", "js/", "data/"];
+		const minify_dirs = ["/", "/css", "/js", "/data"];
 
 
 		for(const dir of remove_dirs){
-		  c.log("Removing /" + dir);
-		  rimraf(site_root + dir, [], e => {if(e) c.log("Could not remove file: " + e, false);});
+		  c.log("Removing " + dir);
+		  rimraf(path.join(site_root, dir), [], e => {if(e) c.log("Could not remove directory: " + e, false);});
 		}
 
 		for(const file of remove_files){
 		  c.log("Removing " + file);
-		  fs.unlink(site_root + file, e => {if(e) c.log("Could not remove file: " + e, false);});
+		  fs.unlink(path.join(site_root, file), e => {if(e) c.log("Could not remove file: " + e, false);});
 		}
 
 		for(const dir of minify_dirs){
-			fs.stat(site_root + dir, e => {
+			fs.stat(path.join(site_root, dir), e => {
 				if(!e){
-					fs.readdir(site_root + dir, (e, files) => {	
+					fs.readdir(path.join(site_root, dir), (e, files) => {	
 						for(const file of files){
 							let p = path.extname(file).toLowerCase();
 							if(p === ".html" || p === ".css" || p === ".js"){
-								c.log("Minifying " + dir + file);
-								minify(site_root + dir + file).then(minified => {
-									fs.writeFile(site_root + dir + file, minified, e => {if(e) c.fail("Failed to write to" + dir + file + ": " + e);});
-								}).catch(e => {c.fail("Failed to minify" + dir + file + ": " + e);});
+								c.log("Minifying " + path.join(dir, file));
+								minify(path.join(site_root, dir, file)).then(minified => {
+									fs.writeFile(path.join(site_root, dir, file), minified, e => {if(e) c.fail("Failed to write to" + path.join(dir, file) + ": " + e);});
+								}).catch(e => {c.fail("Failed to minify" + path.join(dir, file) + ": " + e);});
 							}else if(p === ".json"){
-								c.log("Minifying " + dir + file);
-								fs.readFile(site_root + dir + file, "utf-8", (e, data) => {
-									if(e) c.fail("Failed to read" + dir + file + ": " + e);
-									fs.writeFile(file, JSON.stringify(JSON.parse(data)), e => {if(e) c.fail("Failed to minify" + dir + file + ": " + e);});
+								c.log("Minifying " + path.join(dir, file));
+								fs.readFile(path.join(site_root, dir, file), "utf-8", (e, data) => {
+									if(e) c.fail("Failed to read" + path.join(dir, file) + ": " + e);
+									fs.writeFile(file, JSON.stringify(JSON.parse(data)), e => {if(e) c.fail("Failed to minify" + path.join(dir, file) + ": " + e);});
 								});
 							}
 						}
