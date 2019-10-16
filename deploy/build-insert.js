@@ -9,6 +9,8 @@ module.exports = {
 		const replace = require("replace-in-file");
 		const crypto = require("crypto");
 		
+		c.log(c.path("../js/sw.js"));
+		
 		const rpl_sw_cache_id = replace({
 			files: c.path("../js/sw.js"),
 			from: /"!travis_insert_id!"/g,
