@@ -11,7 +11,7 @@ module.exports = {
 		
 		c.log(c.path("../js/sw.js"));
 		
-		const rpl_sw_cache_id = replace({
+		const rpl_sw_cache_id =  await replace({
 			/*files: c.path("../js/sw.js"),*/
 			files: c.path("/home/travis/build/antonjuulnaber/timewarp/js/sw.js"),
 			from: /"!travis_insert_id!"/g,
