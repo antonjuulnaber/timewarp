@@ -12,8 +12,8 @@ module.exports = {
 		const Linter = require("eslint").Linter;
 		const linter = new Linter();
 		
-		const lint_rules_web = fs.readFileSync(c.path("lint_rules_web"));
-		const lint_rules_node = fs.readFileSync(c.path("lint_rules_node"));
+		const lint_rules_web = fs.readFileSync(c.path("lint-js_rules_web"));
+		const lint_rules_node = fs.readFileSync(c.path("lint-js_rules_node"));
 
 		const lint_dirs = [
 			{

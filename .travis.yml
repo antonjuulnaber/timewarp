@@ -4,7 +4,7 @@ jobs:
   include:
     - stage: "tests"
       name: "check code quailty"
-      script: "node deploy/lint.js"
+      script: "node deploy/run-lint.js"
     - name: "test runtime environment"
       script: "node deploy/run-live-source-test.js"
     - stage: "build & deploy"

@@ -2,6 +2,6 @@
 const path = require("path");
 const c = require(path.join(__dirname, "controls.js"));
 
-const live-test = require(c.path("live-test.js"));
+const live_test = require(c.path("live-test.js"));
 
-live-test.run("https://timewarp.antonjuulnaber.dk");
+live_test.run("https://timewarp.antonjuulnaber.dk");
