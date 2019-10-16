@@ -8,7 +8,6 @@ module.exports = {
 		const site_root = c.path("..");
 
 		const fs = require("fs");
-		const path = require('path');
 		const rimraf = require("rimraf");
 		const minify = require("minify");
 
