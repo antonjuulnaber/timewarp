@@ -16,7 +16,9 @@ module.exports = {
 			files: c.path("/home/travis/build/antonjuulnaber/timewarp/js/sw.js"),
 			from: /"!travis_insert_id!"/g,
 			to: "\"cache-" + crypto.randomBytes(10).toString('hex') + "\""
-		}).catch(e => {
+	}).then(r => {
+			c.log("Results: " + r);
+	}).catch(e => {
 			c.fail("Could not insert new serviceworker cache id: " + e);
 		});
 		
