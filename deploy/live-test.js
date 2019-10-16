@@ -39,7 +39,7 @@ module.exports = {
 		await page.keyboard.type("425");
 		await page.keyboard.press("Enter");
 
-		const output_element = await page.querySelector(ids.output);
+		const output_element = await page.document.querySelector(ids.output);
 		const result = await page.evaluate(output_element => {output_element.value;}, output_element);
 		
 		c.log(result, "info");
