@@ -6,6 +6,7 @@ module.exports = {
 		const path = require("path");
 		const c = require(path.join(__dirname, "controls.js"));
 		
+		const fs = require("fs");
 		const crypto = require("crypto");
 		
 		c.log(c.path("../js/sw.js"));
