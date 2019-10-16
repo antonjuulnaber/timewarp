@@ -9,7 +9,7 @@ module.exports = {
 		const path = require('path');
 		const rimraf = require("rimraf");
 		const minify = require("minify");
-		const c = require(site_root + "deploy/console.js");
+		const c = require(site_root + "deploy/controls.js");
 
 
 		const remove_dirs = ["deploy"];
