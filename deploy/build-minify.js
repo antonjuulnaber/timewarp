@@ -19,12 +19,12 @@ module.exports = {
 
 
 		for(const dir of remove_dirs){
-		  c.log("Removing " + dir);
+		  c.log("Removing " + path.join(dir));
 		  rimraf.sync(path.join(site_root, dir));
 		}
 
 		for(const file of remove_files){
-		  c.log("Removing " + file);
+		  c.log("Removing " + path.join(file));
 		  fs.unlinkSync(path.join(site_root, file));
 		}
 		
