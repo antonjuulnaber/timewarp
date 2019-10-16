@@ -8,7 +8,7 @@ module.exports = {
 		
 		const fs = require("fs");
 		const crypto = require("crypto");
-		
+		/*
 		c.log("Inserting serviceworker unique cache id");
 		
 		let file = c.path("../js/sw.js");
@@ -18,6 +18,7 @@ module.exports = {
 				if(e) c.fail(e);
 			});
 		});
+		*/
 	}
 	
 }
