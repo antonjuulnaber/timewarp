@@ -2,7 +2,7 @@
 
 module.exports = {
 	
-	test: async (host) => {
+	run: async (host) => {
 		
 		const path = await require("path");
 		const c = await require(path.join(__dirname, "controls.js"));
@@ -40,7 +40,7 @@ module.exports = {
 		await page.keyboard.press("Enter");
 
 
-		const result = await page.evaluate(document.querySelector("#result.output").value;);
+		const result = await page.evaluate(element => {document.querySelector("#result.output").value;}, element);
 		
 		c.log(result, "info");
 
