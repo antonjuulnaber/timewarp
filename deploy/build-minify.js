@@ -27,29 +27,22 @@ module.exports = {
 		  c.log("Removing " + file);
 		  fs.unlinkSync(path.join(site_root, file));
 		}
-
+		
 		for(const dir of minify_dirs){
-			fs.stat(path.join(site_root, dir), e => {
-				if(!e){
-					fs.readdir(path.join(site_root, dir), (e, files) => {	
-						for(const file of files){
-							let p = path.extname(file).toLowerCase();
-							if(p === ".html" || p === ".css" || p === ".js"){
-								c.log("Minifying " + path.join(dir, file));
-								minify(path.join(site_root, dir, file)).then(minified => {
-									fs.writeFile(path.join(site_root, dir, file), minified, e => {if(e) c.fail("Failed to write to" + path.join(dir, file) + ": " + e);});
-								}).catch(e => {c.fail("Failed to minify" + path.join(dir, file) + ": " + e);});
-							}else if(p === ".json"){
-								c.log("Minifying " + path.join(dir, file));
-								fs.readFile(path.join(site_root, dir, file), "utf-8", (e, data) => {
-									if(e) c.fail("Failed to read" + path.join(dir, file) + ": " + e);
-									fs.writeFile(file, JSON.stringify(JSON.parse(data)), e => {if(e) c.fail("Failed to minify" + path.join(dir, file) + ": " + e);});
-								});
-							}
-						}
-					});
+			fs.statSync(path.join(site_root, dir));
+			const files = fs.readdir(path.join(site_root, dir));
+			for(const file of files){
+				const p = path.extname(file).toLowerCase();
+				if(p === ".html" || p === ".css" || p === ".js"){
+					c.log("Minifying " + path.join(dir, file));
+					minify(path.join(site_root, dir, file)).then(minified => {
+						fs.writeFileSync(path.join(site_root, dir, file), minified);
+					}).catch(e => {c.fail("Failed to minify" + path.join(dir, file) + ": " + e);});
+				}else if(p === ".json"){
+					c.log("Minifying " + path.join(dir, file));
+					fs.writeFileSync(file, JSON.stringify(JSON.parse(fs.readFileSync(path.join(site_root, dir, file));
 				}
-			});
+			}
 		}
 	}
 }
