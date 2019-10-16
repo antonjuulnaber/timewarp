@@ -30,8 +30,9 @@ module.exports = {
 
 		for(const dir of minify_dirs){
 			console.log(path.join(site_root, dir));
-
-					fs.readdir(path.join(site_root, dir) + "/", (e, files) => {	
+			fs.stat(site_root + dir, e => {
+				if(!e){
+					fs.readdir(site_root + dir, (e, files) => {	
 						console.log(files);
 						for(const file of files){
 							let p = path.extname(file).toLowerCase();
@@ -49,7 +50,8 @@ module.exports = {
 							}
 						}
 					});
-
+				}
+			});
 		}
 	}
 }
