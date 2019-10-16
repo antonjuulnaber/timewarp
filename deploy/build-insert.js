@@ -11,7 +11,7 @@ module.exports = {
 		
 		c.log(c.path("../js/sw.js"));
 		
-		const rpl_sw_cache_id =  await replace({
+		const rpl_sw_cache_id = replace({
 			/*files: c.path("../js/sw.js"),*/
 			files: c.path("/home/travis/build/antonjuulnaber/timewarp/js/sw.js"),
 			from: /"!travis_insert_id!"/g,
@@ -25,7 +25,7 @@ module.exports = {
 		if(rpl_sw_cache_id.hasChanged === true){
 			c.log("Inserted new serviceworker cache id", true);
 		}else{
-			c.log(rpl_sw_cache_id.file, false);
+			c.log(rpl_sw_cache_id, false);
 			c.fail("Could not insert new serviceworker cache id");
 		}
 	}
