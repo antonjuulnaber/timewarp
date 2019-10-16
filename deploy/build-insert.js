@@ -3,14 +3,13 @@
 module.exports = {
 	
 	run: () => {
-		const fs = require("fs");
-		const path = require("path");
+		const c = require(path.join(__dirname + "controls.js");
+		
 		const replace = require("replace-in-file");
 		const crypto = require("crypto");
-		const c = require(__dirname + "/console.js");
 		
 		const rpl_sw_cache_id = replace({
-			files: "../js/sw.js",
+			files: c.path("../js/sw.js"),
 			from: /"!travis_insert_id!"/g,
 			to: "\"cache-" + crypto.randomBytes(10).toString('hex') + "\""
 		});

@@ -3,13 +3,13 @@
 module.exports = {
 	
 	run: () => {
-		const site_root = "/home/travis/build/antonjuulnaber/timewarp/";
+		const c = require(path.join(__dirname + "controls.js");
+		const site_root = c.path("..");
 
 		const fs = require("fs");
 		const path = require('path');
 		const rimraf = require("rimraf");
 		const minify = require("minify");
-		const c = require(site_root + "deploy/console.js");
 
 
 		const remove_dirs = ["deploy"];

@@ -1,7 +1,6 @@
 "use strict";
-const site_root = "/home/travis/build/antonjuulnaber/timewarp/";
+const c = require(path.join(__dirname + "controls.js");
 
-const console = require(site_root + "deploy/console.js");
-const live = require(site_root + "deploy/live-test.js");
+const live = require(c.path("live-test.js"));
 
 live.test("https://timewarp.antonjuulnaber.dk");

@@ -24,5 +24,9 @@ module.exports = {
 	fail: (e) => {
 		module.exports.log(e, "failed");
 		process.exit(1);
+	},
+	path: (p) => {
+		const path = require("path");
+		return path.join(__dirname, p);
 	}
 }
