@@ -5,7 +5,7 @@ module.exports = {
 	run: () => {
 		const path = require("path");
 		const c = require(path.join(__dirname, "controls.js"));
-		const site_root = c.path("..");
+		const site_root = c.path("..") + "/";
 
 		const fs = require("fs");
 		const rimraf = require("rimraf");
@@ -15,7 +15,7 @@ module.exports = {
 		const remove_dirs = ["deploy"];
 		const remove_files = [".travis.yml"];
 
-		const minify_dirs = ["", "css/", "js/", "data/"];
+		const minify_dirs = ["", "css", "js", "data"];
 
 
 		for(const dir of remove_dirs){
