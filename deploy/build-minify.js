@@ -4,7 +4,7 @@ module.exports = {
 	
 	run: () => {
 		const path = require("path");
-		const c = require(path.join(__dirname + "controls.js"));
+		const c = require(path.join(__dirname, "controls.js"));
 		const site_root = c.path("..");
 
 		const fs = require("fs");
