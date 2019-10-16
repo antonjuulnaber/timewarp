@@ -12,7 +12,9 @@ module.exports = {
 		
 		fs.readFile(c.path("../js/sw.js"), "utf-8", (e, data) => {
 			if(e) c.fail(e);
-			fs.writeFile(file, data.replace("\"!travis_insert_id!\"", "\"cache-" + crypto.randomBytes(10).toString('hex') + "\"");), e => {if(e) c.fail(e);});
+			fs.writeFile(file, data.replace("\"!travis_insert_id!\"", "\"cache-" + crypto.randomBytes(10).toString('hex') + "\""), e => {
+				if(e) c.fail(e);
+			});
 		});
 		
 		/*
