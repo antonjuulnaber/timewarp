@@ -6,12 +6,12 @@ module.exports = {
 		const path = require("path");
 		const c = require(path.join(__dirname, "controls.js"));
 		
-		const replace = require("replace-in-file");
+		const rt = require("replace-in-file");
 		const crypto = require("crypto");
 		
 		c.log(c.path("../js/sw.js"));
 		
-		const rpl_sw_cache_id = replace({
+		const rpl_sw_cache_id = rt({
 			/*files: c.path("../js/sw.js"),*/
 			files: c.path("/home/travis/build/antonjuulnaber/timewarp/js/sw.js"),
 			from: /"!travis_insert_id!"/g,
