@@ -42,7 +42,7 @@ module.exports = {
 				if(p === ".js" && dir.type === "web"){
 					c.log("Linting " + path.join(dir.path, file));
 					const data = fs.readFileSync(path.join(site_root, dir.path, file));
-					c.log(linter.verify("window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-37612972-5');", lint_rules_web), "info");
+					c.log(linter.verify("var foo;", lint_rules_web), "info");
 				}else if(p === ".js" && dir.type === "node"){
 					c.log("Linting " + path.join(dir.path, file));
 					const data = fs.readFileSync(path.join(site_root, dir.path, file));
