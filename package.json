@@ -5,7 +5,7 @@
 	"author": "Anton Juul-Naber",
 	"license": "GPL-3.0",
 	"devDependencies": {
-		"minify": "^4",
+		"minify": "^5",
 		"eslint": "^6",
 		"puppeteer": "^2",
 		"server": "^1",
