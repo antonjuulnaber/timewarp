@@ -11,7 +11,7 @@ module.exports = {
 		
 		c.log("Inserting serviceworker unique cache id");
 		
-		let file = c.path("../js/sw.js");
+		let file = c.path("../sw.js");
 		fs.writeFileSync(file, fs.readFileSync(file, "utf-8").replace("\"!travis_insert_id!\"", "\"cache-" + crypto.randomBytes(5).toString('hex') + "\""));
 	}
 	
