@@ -6,8 +6,8 @@
 	"license": "GPL-3.0",
 	"devDependencies": {
 		"minify": "^5",
-		"eslint": "^6",
-		"puppeteer": "^2",
+		"eslint": "^7",
+		"puppeteer": "^3",
 		"server": "^1",
 		"rimraf": "^3"
 	}
