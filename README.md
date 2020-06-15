@@ -1,10 +1,10 @@
 # Timewarp
 [![Dependencies](https://img.shields.io/david/atjn/timewarp.svg?style=for-the-badge)](https://david-dm.org/atjn/timewarp)
 [![Dev dependencies](https://img.shields.io/david/dev/atjn/timewarp?style=for-the-badge)](https://david-dm.org/atjn/timewarp?type=dev)
-[![Build](https://img.shields.io/travis/atjn/timewarp?style=for-the-badge)](https://travis-ci.org/github/atjn/timewarp)
+[![Build](https://img.shields.io/travis/atjn/timewarp?style=for-the-badge&logo=travis)](https://travis-ci.org/github/atjn/timewarp)
 
-[![Website](https://img.shields.io/website?style=for-the-badge&url=https%3A%2F%2Ftimewarp.antonjuulnaber.dk)](https://timewarp.antonjuulnaber.dk)
-[![Observatory](https://img.shields.io/mozilla-observatory/grade/timewarp.antonjuulnaber.dk?publish&style=for-the-badge)](https://observatory.mozilla.org/analyze/timewarp.antonjuulnaber.dk)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Ftimewarp.antonjuulnaber.dk&style=for-the-badge&logo=github)](https://timewarp.antonjuulnaber.dk)
+[![Observatory](https://img.shields.io/mozilla-observatory/grade/timewarp.antonjuulnaber.dk?publish&style=for-the-badge&logo=mozilla)](https://observatory.mozilla.org/analyze/timewarp.antonjuulnaber.dk)
 
 Timewarp is a tool for quickly converting time spent in hours and minutes to just hours (decimal).
 
