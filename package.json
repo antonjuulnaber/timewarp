@@ -1,7 +1,7 @@
 {
-	"repository": "antonjuulnaber/timewarp",
+	"repository": "atjn/timewarp",
 	"name": "timewarp",
-	"homepage": "https://antonjuulnaber.github.io/timewarp/",
+	"homepage": "https://timewarp.antonjuulnaber.dk",
 	"author": "Anton Juul-Naber",
 	"license": "GPL-3.0",
 	"devDependencies": {
