@@ -4,7 +4,8 @@
 [![Build](https://img.shields.io/travis/atjn/timewarp?style=for-the-badge&logo=travis)](https://travis-ci.org/github/atjn/timewarp)
 
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Ftimewarp.antonjuulnaber.dk&style=for-the-badge&logo=github)](https://timewarp.antonjuulnaber.dk)
-[![Observatory](https://img.shields.io/mozilla-observatory/grade/timewarp.antonjuulnaber.dk?publish&style=for-the-badge&logo=mozilla)](https://observatory.mozilla.org/analyze/timewarp.antonjuulnaber.dk)
+[![MDN Observatory](https://img.shields.io/mozilla-observatory/grade/timewarp.antonjuulnaber.dk?publish&style=for-the-badge&logo=mozilla)](https://observatory.mozilla.org/analyze/timewarp.antonjuulnaber.dk)
+[![W3C HTML](https://img.shields.io/w3c-validation/html?label=HTML&targetUrl=https%3A%2F%2Ftimewarp.antonjuulnaber.dk&style=for-the-badge&logo=w3c)](https://validator.nu/?doc=https%3A%2F%2Ftimewarp.antonjuulnaber.dk&parser=html)
 
 Timewarp is a tool for quickly converting time spent in hours and minutes to just hours (decimal).
 
