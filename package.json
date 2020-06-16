@@ -7,7 +7,7 @@
 	"devDependencies": {
 		"minify": "^5",
 		"eslint": "^7",
-		"puppeteer": "^3",
+		"puppeteer": "^4",
 		"server": "^1",
 		"rimraf": "^3"
 	}
