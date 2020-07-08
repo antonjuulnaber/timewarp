@@ -6,7 +6,6 @@ const urlsToCache = [
 	"/",
 	"/css/main.css",
 	"/js/main.js",
-	"/js/gtag.js",
 	"/img/logo.min.svg",
 	"/img/logo_192.min.png",
 	"/img/logo_512.min.png"
