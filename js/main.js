@@ -1,6 +1,6 @@
 "use strict";
 
-/*Test commit*/
+
 
 function q(query){
 	return document.querySelector(query);
