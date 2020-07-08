@@ -6,4 +6,4 @@ const insert = require(c.path("build-insert.js"));
 const minify = require(c.path("build-minify.js"));
 
 insert.run();
-minify.run();
+//minify.run();
