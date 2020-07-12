@@ -1,5 +1,3 @@
-"use strict";
-
 function q(query){
 	return document.querySelector(query);
 }
@@ -9,11 +7,12 @@ function p(number){
 }
 
 async function parsePaste(event){
-	let match = (/(\b|\s|\D|^)(?<hour>[01]\d(?=[:;.,_ ])|2[0-3](?=[:;.,_ ])|\d(?=[:;.,_ ])|0(?=[0-5]\d)|[01]\d|2[0-3]|\d)[:;.,_\s]{0,3}(?<minute>[0-5]\d|\d?)(\b|\s|\D|$)/m).exec(event.clipboardData.getData('Text')) || {groups: "hour"};
-	let input = document.activeElement;
+	const regex = /(\b|\s|\D|^)(?<hour>[01]\d(?=[:;.,_ ])|2[0-3](?=[:;.,_ ])|\d(?=[:;.,_ ])|0(?=[0-5]\d)|[01]\d|2[0-3]|\d)[:;.,_\s]{0,3}(?<minute>[0-5]\d|\d?)(\b|\s|\D|$)/m;
+	let match = (regex).exec(event.clipboardData.getData('Text'));
+	let input = <HTMLInputElement>document.activeElement;
 	
-	if(input.tagName === "INPUT" && input.classList.contains("input") && match.groups.hour){
-		input.value = p(match.groups.hour) + ":" + p(match.groups.minute||"00");
+	if(input.tagName === "INPUT" && input.classList.contains("input") && match?.groups?.hour){
+		input.value = p(match?.groups?.hour) + ":" + p(match?.groups?.minute || "00");
 		input.dispatchEvent(new Event("input"));
 	}
 }
@@ -45,7 +44,7 @@ async function calculateHours(){
 
 
 async function prepareInputs(){
-	let is = document.querySelectorAll("input.input");
+	let is = <NodeListOf<HTMLInputElement>>document.querySelectorAll("input.input");
 	for(let i = 0; i < is.length; i++){
 		is[i].addEventListener("input", () => {
 			if(validateInputs()){
@@ -98,7 +97,7 @@ async function copyResult(){
 }
 
 function validateInputs(){
-	let is = document.querySelectorAll("input.input");
+	let is = <NodeListOf<HTMLInputElement>>document.querySelectorAll("input.input");
 	let valid = true;
 	for(let i = 0; i < is.length; i++){
 		if(!is[i].value && !is[i].value.match(/^([01]\d|2[0123]|\d):\d{1,2}$/)) valid = false;

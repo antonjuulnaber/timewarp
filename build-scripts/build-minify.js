@@ -12,10 +12,10 @@ module.exports = {
 		const minify = require("minify");
 
 
-		const remove_dirs = ["/deploy"];
-		const remove_files = [".travis.yml"];
+		const remove_dirs = [];
+		const remove_files = [];
 
-		const minify_dirs = ["/", "/css", "/js", "/data"];
+		const minify_dirs = ["/public"];
 
 
 		for(const dir of remove_dirs){
