@@ -1,6 +1,6 @@
 {
 	"devDependencies": {
-		"typescript": "^1",
+		"typescript": "^3",
 		"minify": "^5",
 		"rimraf": "^3"
 	}
