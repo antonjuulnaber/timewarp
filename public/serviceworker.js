@@ -4,8 +4,8 @@ const currentCache = "!build_insert_id!";
 const urlsToCache = [
 	"/manifest.json",
 	"/",
-	"/css/main.css",
-	"/js/main.js",
+	"/style.css",
+	"/script.js",
 	"/img/logo.min.svg",
 	"/img/logo_192.min.png",
 	"/img/logo_512.min.png"

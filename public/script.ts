@@ -113,7 +113,7 @@ async function insertTime(){
 }
 async function registerServiceWorker(){
 	if ("serviceWorker" in navigator) {
-		navigator.serviceWorker.register("sw.js");
+		navigator.serviceWorker.register("/serviceworker.js");
 	}
 }
 
