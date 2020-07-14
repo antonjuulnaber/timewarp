@@ -5,7 +5,7 @@
 		"rimraf": "^3"
 	},
 	"scripts": {
-		"build": "tsc && 'build-scripts/run-build.js'",
+		"build": "tsc && node build-scripts/run-build.js",
 		"build-dev": "tsc --watch"
 	}
 }
