@@ -4,8 +4,8 @@
 		"minify": "^5",
 		"rimraf": "^3"
 	},
-	"scripts": { 
-		"build": "tsc && build-scripts/run-build.js",
+	"scripts": {
+		"build": "tsc && 'build-scripts/run-build.js'",
 		"build-dev": "tsc --watch"
 	}
 }
