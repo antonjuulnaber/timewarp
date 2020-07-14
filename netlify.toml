@@ -1,4 +1,3 @@
 [build]
-  base = "/"
   publish = "source/"
   command = "npm run build"
