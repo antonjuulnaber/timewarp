@@ -1,7 +1,7 @@
 # Timewarp
 [![Live Dependencies](https://img.shields.io/david/atjn/timewarp.svg?style=for-the-badge&label=Live%20Dependencies)](https://david-dm.org/atjn/timewarp)
 [![Dev dependencies](https://img.shields.io/david/dev/atjn/timewarp?style=for-the-badge)](https://david-dm.org/atjn/timewarp?type=dev)
-[![Build](![Netlify](https://img.shields.io/netlify/5bf06725-c9f2-478d-979e-598116ad3e4c?label=build&logo=netlify&style=for-the-badge))](https://app.netlify.com/sites/timewarp/deploys)
+[![Build](https://img.shields.io/netlify/5bf06725-c9f2-478d-979e-598116ad3e4c?label=build&logo=netlify&style=for-the-badge)](https://app.netlify.com/sites/timewarp/deploys)
 
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Ftimewarp.atjn.dk&style=for-the-badge&logo=netlify)](https://timewarp.atjn.dk)
 [![MDN Observatory](https://img.shields.io/mozilla-observatory/grade/timewarp.atjn.dk?publish&style=for-the-badge&logo=mozilla)](https://observatory.mozilla.org/analyze/timewarp.atjn.dk)
