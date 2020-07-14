@@ -7,7 +7,6 @@
     for = "/*"
 
     [headers.values]
-        X-Frame-Options = "SAMEORIGIN"
         X-Content-Type-Options = "nosniff"
         Referrer-Policy = "strict-origin-when-cross-origin"
         Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
@@ -17,6 +16,14 @@
             script-src 'self';
             img-src 'self';
             manifest-src 'self';
-            connect-src 'self'
+            connect-src 'self';
+            frame-ancestors 'none';
+            base-uri 'self;
+            form-action 'none'
         """
-        Feature-Policy = "camera 'none'; microphone 'none'; payment 'none'; geolocation 'none'"
+        Feature-Policy = """
+            camera 'none';
+            microphone 'none';
+            payment 'none';
+            geolocation 'none'
+        """
