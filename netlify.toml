@@ -12,4 +12,4 @@
         Referrer-Policy = "strict-origin-when-cross-origin"
         Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
         Content-Security-Policy = "default-src 'self'"
-        Feature-Policy "camera 'none'; microphone 'none'; payment 'none'; geolocation 'none'"
+        Feature-Policy = "camera 'none'; microphone 'none'; payment 'none'; geolocation 'none'"
