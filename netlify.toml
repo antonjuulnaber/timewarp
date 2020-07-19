@@ -21,9 +21,9 @@
             base-uri 'self';
             form-action 'none'
         """
-        Feature-Policy = """
-            camera 'none';
-            microphone 'none';
-            payment 'none';
-            geolocation 'none'
+        Permissions-Policy = """
+            camera=(),
+            microphone=(),
+            payment=(),
+            geolocation=()
         """
