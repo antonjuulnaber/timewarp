@@ -44,26 +44,6 @@ input{
 	background: none;
 	outline: none;
 }
-input[type=time]{
-	-webkit-appearance: none;
-	width: 18%;
-}
-input[type=time]::-webkit-date-and-time-value{
-	margin: 0;
-}
-input[type=time]::-webkit-datetime-edit-fields-wrapper{
-	display: flex;
-}
-input[type=time]::-webkit-inner-spin-button, input[type=time]::-webkit-clear-button{
-	display: none;
-}
-input[type=time]::-webkit-datetime-edit-hour-field, input[type=time]::-webkit-datetime-edit-minute-field{
-	transition: background .2s ease-out, color .2s ease-out;
-	border-radius: 25%;
-}
-input[type=time]::-webkit-datetime-edit-hour-field:focus, input[type=time]::-webkit-datetime-edit-minute-field:focus{
-	background: rgba(255, 255, 255, .3);
-}
 input#start{
 	left: 13%;
 }
