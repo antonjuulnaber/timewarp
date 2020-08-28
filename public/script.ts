@@ -61,11 +61,11 @@ async function prepareInputs(){
 	});
 	
 	
-	let as = [].slice.call(document.querySelectorAll("a"));
+	let as = [].slice.call(document.querySelectorAll("input.input"));
 	let r = q("#result");
 	as.push(r);
-	for(let a = 0; a < as.length; a++){
-		as[a].addEventListener("keydown", (event) => {
+	for(const a of as){
+		a.addEventListener("keydown", function(event){
 			if(event.key === "Enter"){
 				event.preventDefault();
 				copyResult();
@@ -84,7 +84,7 @@ async function prepareInputs(){
 	r.addEventListener("mouseup", () => {
 		setTimeout(() => {r.select();}, 10);
 	});
-}//test
+}
 
 async function copyResult(){
 	if(!validateInputs()) return;
