@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://timewarp.atjn.dk/images/logo.svg" width="128px" height="128px">
+  <img src="https://timewarp.atjn.dk/images/logo.svg" width="128px" height="128px" alt>
   <br>
   <h1 align="center">Timewarp</h1>
   <p align="center">A tool for quickly converting time spent in<br>hours and minutes to just hours (decimal)</p>
@@ -7,23 +7,23 @@
 
 <p align="center">
   <a href="https://timewarp.atjn.dk">
-    <img src="https://img.shields.io/website?url=https%3A%2F%2Ftimewarp.atjn.dk&label=Website&style=flat-square&logo=netlify" alt="Website">
+    <img src="https://img.shields.io/website?url=https%3A%2F%2Ftimewarp.atjn.dk&label=Website&style=flat-square&logo=netlify" alt="Website status">
   </a>
   <a href="https://observatory.mozilla.org/analyze/timewarp.atjn.dk">
-    <img src="https://img.shields.io/mozilla-observatory/grade/timewarp.atjn.dk?publish&label=Observatory&style=flat-square&logo=mozilla" alt="MDN Observatory">
+    <img src="https://img.shields.io/mozilla-observatory/grade/timewarp.atjn.dk?publish&label=Observatory&style=flat-square&logo=mozilla" alt="MDN Observatory status">
   </a>
   <a href="https://validator.nu/?doc=https%3A%2F%2Ftimewarp.atjn.dk&parser=html">
-    <img src="https://img.shields.io/w3c-validation/html?label=HTML&targetUrl=https%3A%2F%2Ftimewarp.atjn.dk&style=flat-square&logo=w3c" alt="W3C HTML">
+    <img src="https://img.shields.io/w3c-validation/html?label=HTML&targetUrl=https%3A%2F%2Ftimewarp.atjn.dk&style=flat-square&logo=w3c" alt="W3C HTML Validator status">
   </a>
   <br>
   <a href="https://david-dm.org/atjn/timewarp">
-    <img src="https://img.shields.io/david/atjn/timewarp.svg?style=flat-square&label=Live%20Dependencies" alt="Live Dependencies">
+    <img src="https://img.shields.io/david/atjn/timewarp.svg?style=flat-square&label=Live%20Dependencies" alt="Live Dependencies status">
   </a>
   <a href="https://david-dm.org/atjn/timewarp?type=dev">
-    <img src="https://img.shields.io/david/dev/atjn/timewarp?style=flat-square&label=Dev%20Dependencies" alt="Dev dependencies">
+    <img src="https://img.shields.io/david/dev/atjn/timewarp?style=flat-square&label=Dev%20Dependencies" alt="Dev dependencies status">
   </a>
   <a href="https://app.netlify.com/sites/timewarp/deploys">
-    <img src="https://img.shields.io/netlify/5bf06725-c9f2-478d-979e-598116ad3e4c?label=Build&logo=netlify&style=flat-square" alt="Build">
+    <img src="https://img.shields.io/netlify/5bf06725-c9f2-478d-979e-598116ad3e4c?label=Build&logo=netlify&style=flat-square" alt="Build status">
   </a>
 </p>
 
