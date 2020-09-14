@@ -4,43 +4,70 @@ module.exports = {
 	
 	run: () => {		
 		const path = require('path');
-		const c = require(path.join(__dirname, "controls.js"));
-		const site_root = c.path("..");
+		const site_root = path.join(__dirname, "..");
 
-		const fs = require("fs");
-		const rimraf = require("rimraf");
-		const minify = require("minify");
+		const fs = require("fs-extra");
 
+		const minifier = require("minify");
 
-		const remove_dirs = [];
-		const remove_files = [];
-
-		const minify_dirs = ["/public"];
-
-
-		for(const dir of remove_dirs){
-			c.log("Removing " + path.join(dir));
-			rimraf.sync(path.join(site_root, dir));
+		const minifier_options = {
+			img: {
+				maxSize: 512
+			}
 		}
 
-		for(const file of remove_files){
-			c.log("Removing " + path.join(file));
-			fs.unlinkSync(path.join(site_root, file));
+
+		const copy = [
+			{
+				"from": "/source",
+				"to": "/public"
+			}
+		];
+
+		const remove = [
+			"/public/script.ts"
+		];
+
+		const minify = [
+			"/public"
+		];
+
+
+		for(const command of copy){
+			console.log(`Copying ${path.join(command.from)} to ${path.join(command.to)}`);
+			fs.removeSync(path.join(site_root, command.to));
+			fs.copySync(path.join(site_root, command.from), path.join(site_root, command.to));
+		}
+
+		for(const mount of remove){
+			console.log(`Removing ${path.join(mount)}`);
+			fs.removeSync(path.join(site_root, mount));
 		}
 		
-		for(const dir of minify_dirs){
-			if(!fs.existsSync(path.join(site_root, dir))) continue;
-			const files = fs.readdirSync(path.join(site_root, dir));
+		for(const mount of minify){
+			let files = [];
+			if(!fs.existsSync(path.join(site_root, mount))){
+				console.warn(`${path.join(mount)} does not exist, cannot minify`);
+				continue;
+			}else if(fs.lstatSync(path.join(site_root, mount)).isFile()){
+				files.push(mount);
+			}else if(fs.lstatSync(path.join(site_root, mount)).isDirectory()){
+				for(const file of fs.readdirSync(path.join(site_root, mount))){
+					files.push(path.join(mount, file));
+				}
+			}else{
+				continue;
+			}
 			for(const file of files){
-				const p = path.extname(file).toLowerCase();
-				if(p === ".html" || p === ".css" || p === ".js"){
-					c.log("Minifying " + path.join(dir, file));
-					minify(path.join(site_root, dir, file)).then(minified => {
-						fs.writeFileSync(path.join(site_root, dir, file), minified);
-					}).catch(e => {c.fail("Failed to minify" + path.join(dir, file) + ": " + e);});
-				}else if(p === ".json"){
-					c.log("Minifying " + path.join(dir, file));
-					fs.writeFileSync(file, JSON.stringify(JSON.parse(fs.readFileSync(path.join(site_root, dir, file)))));
+				const ext = path.extname(file).toLowerCase();
+				if(ext === ".html" || ext === ".css" || ext === ".js"){
+					console.log(`Minifying ${path.join(file)}`);
+					minifier(path.join(site_root, file), minifier_options).then(minified => {
+						fs.writeFileSync(path.join(site_root, file), minified);
+					}).catch(error => {console.error(error)});
+				}else if(ext === ".json"){
+					console.log(`Minifying ${path.join(file)}`);
+					fs.writeFileSync(path.join(site_root, file), JSON.stringify(JSON.parse(fs.readFileSync(path.join(site_root, file)))));
 				}
 			}
 		}

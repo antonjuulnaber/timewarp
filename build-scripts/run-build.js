@@ -1,9 +1,8 @@
 "use strict";
 const path = require("path");
-const c = require(path.join(__dirname, "controls.js"));
 
-const insert = require(c.path("build-insert.js"));
-const minify = require(c.path("build-minify.js"));
+const minify = require(path.join(__dirname, "build-minify.js"));
+const insert = require(path.join(__dirname, "build-insert.js"));
 
-insert.run();
 minify.run();
+insert.run();

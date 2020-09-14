@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+	<head>
+	
+		<meta charset="UTF-8">
+		
+		<meta name="description" content="A tool for quickly converting time spent in hours and minutes to just hours (in decimal)">
+		
+		<link rel="stylesheet" href="/style.css"/>
+		
+		<script src="/script.js"></script>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<meta name="theme-color" content="#442939">
+		
+		<title>Timewarp</title>
+		
+		<link rel="icon" href="/images/logo_192.png">
+		
+		<link rel="manifest" href="/manifest.json">
+		
+	</head>
+	
+	<body class="finput">
+	
+		<h2 class="input" >Input time period</h2>
+		<input class="input" type="time" id="start" aria-label="When did you start working?" autofocus>
+		<p class="input">→</p>
+		<input class="input" type="time" id="end" aria-label="When did you stop working?">
+		
+		<h2 class="output" >You've been working for</h2>
+		<input class="output" id="result" name="result" aria-label="Youv'e been working for">
+		<label class="output" for="result">hours</label>
+		<svg class="output" viewBox="0 0 20 20" id="copy" width="0" height="0">
+			<defs>
+				<filter id="fshadow" x="-1" y="-1" width="300%" height="300%">
+					<feOffset result="offOut" in="SourceGraphic" dx="0.05" dy="0.05" />
+					<feGaussianBlur id="shadowBlur" result="blurOut" in="offOut" stdDeviation="1" />
+					<feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+				</filter>
+				<animate
+				xlink:href="#shadowBlur"
+				attributeName="stdDeviation"
+				from="0.1"
+				to="0.1"
+				dur="3s"
+				begin="0s"
+				values="0.2; 0.5; 0.2"
+				keyTimes="0; 0.5; 1"
+				calcMode="spline"
+				keySplines="
+					.42 0 .58 1 ;
+					.42 0 .58 1 
+				"
+				repeatCount="indefinite"
+				/>
+			</defs>
+			<path class="shadow" filter="url(#fshadow)" d="
+			M 8 6
+			h  4
+			v  7
+			h -3
+			v -4
+			h -1
+			Z
+			"
+			stroke-linejoin="round"
+			/>
+			
+			<a>
+				<defs>
+					<filter id="fmain" x="-1" y="-1" width="300%" height="300%">
+						<feOffset result="offOut" in="SourceGraphic" dx="0.1" dy="0.1" />
+						<feGaussianBlur result="blurOut" in="offOut" stdDeviation="0.1" />
+						<feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+					</filter>
+				</defs>
+				<path class="main" filter="url(#fmain)" d="
+				M 8 6
+				h  4
+				v  7
+				h -3
+				v -4
+				h -1
+				Z
+				"
+				stroke-linejoin="round"
+				/>
+				
+				<text 
+				x="10"
+				y="7.5"
+				font-size="1"
+				text-anchor="middle"
+				alignment-baseline="middle"
+				>
+					Copy
+				</text>
+			</a>
+		</svg>
+		
+		
+	</body>
+	
+</html>
