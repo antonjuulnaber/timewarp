@@ -1,7 +1,8 @@
 {
 	"devDependencies": {
 		"fs-extra": "^9",
-		"minify": "^5"
+		"minify": "^5",
+		"typescript": "^4"
 	},
 	"scripts": {
 		"build": "tsc && node build-scripts/run-build.js",
