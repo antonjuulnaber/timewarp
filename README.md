@@ -41,9 +41,8 @@ This repo only contains source files. In order to build the final project files,
 
 ### What happens during a build
 When building, the script will perform the following steps:
-1. Compile all typescript files to javascript.
-2. Insert a unique ID in the serviceworker, differentiating the build from all other builds.
-3. Minify html, css and js files.
+1. Insert a unique ID in the serviceworker, differentiating the build from all other builds.
+2. Minify html, css and js files.
 
 ### Building during development
 It is possible to build a working copy during development by running `npm run build-dev`. The dev-build will update itself whenever changes are made in the source files. Practically speaking, the dev-build will be identical to a final build, but it is not minified, meaning there can in rare occasions be wierd errors in the final build that weren't catched in the dev-build.
