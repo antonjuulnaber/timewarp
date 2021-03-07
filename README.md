@@ -16,6 +16,13 @@
     <img src="https://img.shields.io/w3c-validation/html?label=HTML&targetUrl=https%3A%2F%2Ftimewarp.atjn.dk&style=flat-square&logo=w3c" alt="W3C HTML Validator status">
   </a>
   <br>
+	<a href="https://www.codacy.com/gh/atjn/timewarp/dashboard">
+		<img src="https://img.shields.io/codacy/grade/d4785533451f4f5bb10eac89433133b4?style=flat-square" alt="Code quality">
+	</a>
+	<a href="https://www.codacy.com/gh/atjn/timewarp/dashboard">
+		<img src="https://img.shields.io/codacy/coverage/d4785533451f4f5bb10eac89433133b4?style=flat-square" alt="Code coverage">
+	</a>
+	<br>
   <a href="https://david-dm.org/atjn/timewarp">
     <img src="https://img.shields.io/david/atjn/timewarp.svg?style=flat-square&label=Live%20Dependencies" alt="Live Dependencies status">
   </a>

@@ -1,3 +1,5 @@
+"use strict";
+
 function q(query){
 	return document.querySelector(query);
 }

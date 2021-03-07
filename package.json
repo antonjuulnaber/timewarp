@@ -1,9 +1,6 @@
 {
 	"devDependencies": {
 		"eslint": "^7.21.0",
-		"eslint-config-standard": "^16.0.2",
-		"eslint-plugin-import": "^2.22.1",
-		"eslint-plugin-node": "^11.1.0",
 		"eslint-plugin-promise": "^4.3.1",
 		"fs-extra": "^9.0.1",
 		"minify": "^6.0.0",
@@ -11,9 +8,9 @@
 		"stylelint-config-recommended": "^3.0.0"
 	},
 	"scripts": {
-		"lint": "npm run lint-js && npm run lint-css",
-		"lint-js": "eslint '**/*.js'",
-		"lint-css": "stylelint '**/*.css'",
+		"lint": "npm run lint:js && npm run lint:css",
+		"lint:js": "eslint '**/*.js'",
+		"lint:css": "stylelint '**/*.css'",
 		"build": "node build-scripts/run-build.js"
 	}
 }
