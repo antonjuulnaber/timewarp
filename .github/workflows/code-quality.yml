@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
 
-  lint:
+  test:
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -28,8 +28,5 @@ jobs:
           path: ~/.npm
           key: ${{ runner.os }}-node${{ matrix.node-version }}-${{ hashFiles('**/package-lock.json') }}
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: lint code
-        run: npm run lint
+      - name: Test code quality
+        run: npm test

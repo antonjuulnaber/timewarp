@@ -1,5 +1,13 @@
 "use strict";
 
 module.exports = {
-  extends: 'stylelint-config-recommended',
-}
+
+	"extends": [
+		"@atjn/stylelint-config",
+	],
+
+	"ignoreFiles": [
+		"./test/fixture/**",
+	],
+
+};

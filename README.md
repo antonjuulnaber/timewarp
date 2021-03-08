@@ -16,11 +16,14 @@
     <img src="https://img.shields.io/w3c-validation/html?label=HTML&targetUrl=https%3A%2F%2Ftimewarp.atjn.dk&style=flat-square&logo=w3c" alt="W3C HTML Validator status">
   </a>
   <br>
-	<a href="https://www.codacy.com/gh/atjn/timewarp/dashboard">
-		<img src="https://img.shields.io/codacy/grade/d4785533451f4f5bb10eac89433133b4?style=flat-square" alt="Code quality">
+	<a href="https://github.com/atjn/timewarp/actions/workflows/code-quality.yml">
+		<img src="https://img.shields.io/github/workflow/status/atjn/timewarp/Code%20quality?style=flat-square&label=tests" alt="tests status">
 	</a>
-	<a href="https://www.codacy.com/gh/atjn/timewarp/dashboard">
-		<img src="https://img.shields.io/codacy/coverage/d4785533451f4f5bb10eac89433133b4?style=flat-square" alt="Code coverage">
+  <a href="https://www.codacy.com/gh/atjn/timewarp/dashboard">
+		<img src="https://img.shields.io/codacy/grade/d4785533451f4f5bb10eac89433133b4?style=flat-square" alt="code quality">
+	</a>
+  <a href="https://lgtm.com/projects/g/atjn/timewarp/context:javascript">
+		<img src="https://img.shields.io/lgtm/grade/javascript/g/atjn/timewarp.svg?style=flat-square&logo=lgtm&label=security%20score" alt="lgtm js security score">
 	</a>
 	<br>
   <a href="https://david-dm.org/atjn/timewarp">
