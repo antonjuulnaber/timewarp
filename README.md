@@ -6,34 +6,21 @@
 </p>
 
 <p align="center">
+  <a href="https://app.netlify.com/sites/timewarp/deploys">
+    <img src="https://img.shields.io/netlify/5bf06725-c9f2-478d-979e-598116ad3e4c?label=Build&logo=netlify&style=flat-square" alt="Build status">
+  </a>
   <a href="https://timewarp.atjn.dk">
     <img src="https://img.shields.io/website?url=https%3A%2F%2Ftimewarp.atjn.dk&label=Website&style=flat-square&logo=netlify" alt="Website status">
-  </a>
-  <a href="https://observatory.mozilla.org/analyze/timewarp.atjn.dk">
-    <img src="https://img.shields.io/mozilla-observatory/grade/timewarp.atjn.dk?publish&label=Observatory&style=flat-square&logo=mozilla" alt="MDN Observatory status">
-  </a>
-  <a href="https://validator.nu/?doc=https%3A%2F%2Ftimewarp.atjn.dk&parser=html">
-    <img src="https://img.shields.io/w3c-validation/html?label=HTML&targetUrl=https%3A%2F%2Ftimewarp.atjn.dk&style=flat-square&logo=w3c" alt="W3C HTML Validator status">
   </a>
   <br>
 	<a href="https://github.com/atjn/timewarp/actions/workflows/code-quality.yml">
 		<img src="https://img.shields.io/github/workflow/status/atjn/timewarp/Code%20quality?style=flat-square&label=tests" alt="tests status">
 	</a>
-  <a href="https://www.codacy.com/gh/atjn/timewarp/dashboard">
-		<img src="https://img.shields.io/codacy/grade/d4785533451f4f5bb10eac89433133b4?style=flat-square" alt="code quality">
-	</a>
   <a href="https://lgtm.com/projects/g/atjn/timewarp/context:javascript">
 		<img src="https://img.shields.io/lgtm/grade/javascript/g/atjn/timewarp.svg?style=flat-square&logo=lgtm&label=security%20score" alt="lgtm js security score">
 	</a>
-	<br>
-  <a href="https://david-dm.org/atjn/timewarp">
-    <img src="https://img.shields.io/david/atjn/timewarp.svg?style=flat-square&label=Live%20Dependencies" alt="Live Dependencies status">
-  </a>
-  <a href="https://david-dm.org/atjn/timewarp?type=dev">
-    <img src="https://img.shields.io/david/dev/atjn/timewarp?style=flat-square&label=Dev%20Dependencies" alt="Dev dependencies status">
-  </a>
-  <a href="https://app.netlify.com/sites/timewarp/deploys">
-    <img src="https://img.shields.io/netlify/5bf06725-c9f2-478d-979e-598116ad3e4c?label=Build&logo=netlify&style=flat-square" alt="Build status">
+  <a href="https://observatory.mozilla.org/analyze/timewarp.atjn.dk">
+    <img src="https://img.shields.io/mozilla-observatory/grade/timewarp.atjn.dk?publish&label=Observatory&style=flat-square&logo=mozilla" alt="MDN Observatory status">
   </a>
 </p>
 
