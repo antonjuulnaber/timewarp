@@ -6,8 +6,4 @@ module.exports = {
 		"@atjn/stylelint-config",
 	],
 
-	"ignoreFiles": [
-		"./test/fixture/**",
-	],
-
 };
