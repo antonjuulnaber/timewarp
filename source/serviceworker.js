@@ -8,14 +8,16 @@ const urlsToCache = [
 	"/script.js",
 	"/images/logo.svg",
 	"/images/logo_192.png",
-	"/images/logo_512.png"
+	"/images/logo_512.png",
 ];
 
 self.addEventListener("install", (event) => {
 	event.waitUntil(
 		caches.open(currentCache).then((cache) => {
 			return cache.addAll(urlsToCache);
-		}).catch((e) => {console.error("SW failed to install: could not load cache " + currentCache + ": " + e);})
+		}).catch((e) => {
+			console.error(`SW failed to install: could not load cache ${currentCache}: ${e}`);
+		}),
 	);
 });
 
@@ -27,21 +29,25 @@ self.addEventListener("activate", (event) => {
 					if(currentCache.indexOf(cacheName) === -1){
 						return caches.delete(cacheName);
 					}
-				})
+				}),
 			);
-		}).catch((e) => {console.error("SW failed to activate: could not remove legacy cache: " + e);})
+		}).catch((e) => {
+			console.error(`SW failed to activate: could not remove legacy cache: ${e}`);
+		}),
 	);
 });
 
 self.addEventListener("fetch", (event) => {
 	event.respondWith(
 		caches.match(
-			event.request
+			event.request,
 		).then((response) => {
 			if(response){
 				return response;
 			}
 			return fetch(event.request);
-		}).catch((e) => {console.error("SW failed to fetch resource: " + e);})
+		}).catch((e) => {
+			console.error(`SW failed to fetch resource: ${e}`);
+		}),
 	);
 });

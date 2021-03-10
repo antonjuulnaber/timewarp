@@ -10,8 +10,8 @@ module.exports = {
 		
 		console.log("Inserting serviceworker unique cache id");
 		
-		let file = path.join(__dirname, "../public/serviceworker.js");
-		fs.writeFileSync(file, fs.readFileSync(file, "utf-8").replace("\"!build_insert_id!\"", "\"cache-" + crypto.randomBytes(5).toString('hex') + "\""));
-	}
+		const file = path.join(__dirname, "../public/serviceworker.js");
+		fs.writeFileSync(file, fs.readFileSync(file, "utf-8").replace("\"!build_insert_id!\"", `"cache-${crypto.randomBytes(5).toString("hex")}"`));
+	},
 	
-}
+};

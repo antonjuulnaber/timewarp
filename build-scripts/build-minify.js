@@ -3,7 +3,7 @@
 module.exports = {
 	
 	run: () => {		
-		const path = require('path');
+		const path = require("path");
 		const site_root = path.join(__dirname, "..");
 
 		const fs = require("fs-extra");
@@ -12,24 +12,24 @@ module.exports = {
 
 		const minifier_options = {
 			img: {
-				maxSize: 512
-			}
-		}
+				maxSize: 512,
+			},
+		};
 
 
 		const copy = [
 			{
 				"from": "/source",
-				"to": "/public"
-			}
+				"to": "/public",
+			},
 		];
 
 		const remove = [
-			"/public/script.ts"
+			"/public/script.ts",
 		];
 
 		const minify = [
-			"/public"
+			"/public",
 		];
 
 
@@ -45,7 +45,7 @@ module.exports = {
 		}
 		
 		for(const mount of minify){
-			let files = [];
+			const files = [];
 			if(!fs.existsSync(path.join(site_root, mount))){
 				console.warn(`${path.join(mount)} does not exist, cannot minify`);
 				continue;
@@ -63,13 +63,15 @@ module.exports = {
 				if(ext === ".html" || ext === ".css" || ext === ".js"){
 					console.log(`Minifying ${path.join(file)}`);
 					minifier(path.join(site_root, file), minifier_options).then(minified => {
-						fs.writeFileSync(path.join(site_root, file), minified);
-					}).catch(error => {console.error(error)});
+						return fs.writeFileSync(path.join(site_root, file), minified);
+					}).catch(error => {
+						console.error(error);
+					});
 				}else if(ext === ".json"){
 					console.log(`Minifying ${path.join(file)}`);
 					fs.writeFileSync(path.join(site_root, file), JSON.stringify(JSON.parse(fs.readFileSync(path.join(site_root, file)))));
 				}
 			}
 		}
-	}
-}
+	},
+};
