@@ -7,7 +7,7 @@
 
 module.exports = {
 
-	"extends": [
+	extends: [
 		"@atjn/eslint-config",
 	],
 
