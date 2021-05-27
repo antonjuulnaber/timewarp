@@ -81,9 +81,8 @@ async function calculateHours(){
  * This function runs once on page load and is responsible for connecting all the different JS functions to the correct DOM listeners.
  */
 async function prepareInputs(){
-	const is = document.querySelectorAll("input.input");
-	for(let i = 0; i < is.length; i++){
-		is[i].addEventListener("input", () => {
+	for(const input of document.querySelectorAll("input.input")){
+		input.addEventListener("input", () => {
 			if(validateInputs()){
 				calculateHours();
 				togglePageState(true);
@@ -98,11 +97,10 @@ async function prepareInputs(){
 	});
 	
 	
-	const as = [].slice.call(document.querySelectorAll("input.input"));
-	const r = q("#result");
-	as.push(r);
-	for(const a of as){
-		a.addEventListener("keydown", (event) => {
+	const inputs = [].slice.call(document.querySelectorAll("input.input"));
+	const result = q("#result");
+	for(const element of [ ...inputs, result ]){
+		element.addEventListener("keydown", (event) => {
 			if(event.key === "Enter"){
 				event.preventDefault();
 				copyResult();
@@ -113,13 +111,13 @@ async function prepareInputs(){
 		copyResult();
 	});
 	
-	r.addEventListener("input", () => {
+	result.addEventListener("input", () => {
 		if(validateInputs()){
 			calculateHours();
 		}
 	});
-	r.addEventListener("mouseup", () => {
-		setTimeout(() => {r.select();}, 10);
+	result.addEventListener("mouseup", () => {
+		setTimeout(() => {result.select();}, 10);
 	});
 }
 
@@ -142,10 +140,9 @@ async function copyResult(){
  * @returns {boolean} - Wether or not the inputs passed the test.
  */
 function validateInputs(){
-	const is = document.querySelectorAll("input.input");
 	let valid = true;
-	for(let i = 0; i < is.length; i++){
-		if(!is[i].value && !is[i].value.match(/^(?<timestamp>[01]\d|2[0123]|\d):\d{1,2}$/u)) valid = false;
+	for(const input of document.querySelectorAll("input.input")){
+		if(!input.value && !input.value.match(/^(?<timestamp>[01]\d|2[0123]|\d):\d{1,2}$/u)) valid = false;
 	}
 	return valid;
 }
@@ -155,17 +152,17 @@ function validateInputs(){
  * The idea is that the user is probably registering some time that ended just now.
  */
 async function insertTime(){
-	const d = new Date();
-	d.setMinutes(d.getMinutes() + 1);
+	const currentDate = new Date();
+	currentDate.setMinutes(currentDate.getMinutes() + 1);
 	
-	q("input#end").value = `${p(d.getHours())}:${p(d.getMinutes())}`;
+	q("input#end").value = `${p(currentDate.getHours())}:${p(currentDate.getMinutes())}`;
 }
 
 /**
  * Registers the servicerworker.
  */
 async function registerServiceWorker(){
-	if ("serviceWorker" in navigator){
+	if("serviceWorker" in navigator){
 		navigator.serviceWorker.register("/serviceworker.js");
 	}
 }
