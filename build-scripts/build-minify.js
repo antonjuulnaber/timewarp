@@ -1,4 +1,9 @@
+/* eslint-disable */
 "use strict";
+
+/**
+ * ESLint is disabled because these files will be replaced in the near future, so no reason to spend time fixing linting errors.
+ */
 
 module.exports = {
 	

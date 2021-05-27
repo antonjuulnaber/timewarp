@@ -1,5 +1,10 @@
 "use strict";
 
+/**
+ * @file
+ * It's serviceworker is pretty basic, it just caches all website resources and uses them indefinetely, until a new serviceworker takes over.
+ */
+
 const currentCache = "!build_insert_id!";
 const urlsToCache = [
 	"/manifest.json",
