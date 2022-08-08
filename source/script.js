@@ -1,5 +1,3 @@
-"use strict";
-
 /**
  * @file
  * This is the main script file, it contains all the logic behind the inputs and outputs.
