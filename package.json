@@ -4,6 +4,7 @@
     "@atjn/eslint-config": "^5.1.0",
     "@atjn/htmlvalidate-config": "^5.0.0",
     "@atjn/stylelint-config": "^3.0.0",
+    "easy-web-app-builder": "1.0.0-beta1",
     "eslint": "^8.20.0",
     "eslint-plugin-jsdoc": "^39.3.3",
     "eslint-plugin-promise": "^6.0.0",
@@ -17,8 +18,5 @@
     "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
     "test": "npm install && npm run lint",
     "build": "npx easy-web-app-builder"
-  },
-  "dependencies": {
-    "easy-web-app-builder": "file:../easy-web-app-builder/easy-web-app-builder-1.0.0-beta1.tgz"
   }
 }
