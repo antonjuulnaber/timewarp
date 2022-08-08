@@ -156,7 +156,5 @@ async function insertTime(){
 	q("input#end").value = `${p(currentDate.getHours())}:${p(currentDate.getMinutes())}`;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-	prepareInputs();
-	insertTime();
-});
+prepareInputs();
+insertTime();
