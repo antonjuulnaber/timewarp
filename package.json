@@ -1,22 +1,24 @@
 {
-	"devDependencies": {
-		"@atjn/eslint-config": "^3.3.1",
-		"@atjn/htmlvalidate-config": "^3.0.0",
-		"@atjn/stylelint-config": "^2.0.0",
-		"eslint": "^7.32.0",
-		"eslint-plugin-jsdoc": "^37.1.0",
-		"eslint-plugin-promise": "^5.2.0",
-		"fs-extra": "^10.0.0",
-		"html-validate": "^6.1.3",
-		"minify": "^7.0.2",
-		"stylelint": "^14.1.0"
-	},
-	"scripts": {
-		"lint:js": "eslint \"**/*.js\"",
-		"lint:css": "stylelint \"source/**/*.css\"",
-		"lint:html": "html-validate \"source/**/*.html\"",
-		"lint": "npm run lint:js && npm run lint:css && npm run lint:html",
-		"test": "npm install && npm run lint",
-		"build": "node build-scripts/run-build.js"
-	}
+  "type": "module",
+  "devDependencies": {
+    "@atjn/eslint-config": "^5.1.0",
+    "@atjn/htmlvalidate-config": "^5.0.0",
+    "@atjn/stylelint-config": "^3.0.0",
+    "eslint": "^8.20.0",
+    "eslint-plugin-jsdoc": "^39.3.3",
+    "eslint-plugin-promise": "^6.0.0",
+    "html-validate": "^7.1.2",
+    "stylelint": "^14.9.1"
+  },
+  "scripts": {
+    "lint:js": "eslint \"**/*.js\"",
+    "lint:css": "stylelint \"source/**/*.css\"",
+    "lint:html": "html-validate \"source/**/*.html\"",
+    "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
+    "test": "npm install && npm run lint",
+    "build": "npx easy-web-app-builder"
+  },
+  "dependencies": {
+    "easy-web-app-builder": "file:../easy-web-app-builder/easy-web-app-builder-1.0.0-beta1.tgz"
+  }
 }

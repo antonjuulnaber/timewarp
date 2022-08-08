@@ -1,2 +1,7 @@
 node_modules
 public
+
+# Ignore output from easy-web-app-builder:
+.ewab-cache
+public
+

@@ -158,19 +158,7 @@ async function insertTime(){
 	q("input#end").value = `${p(currentDate.getHours())}:${p(currentDate.getMinutes())}`;
 }
 
-/**
- * Registers the servicerworker.
- */
-async function registerServiceWorker(){
-	if("serviceWorker" in navigator){
-		navigator.serviceWorker.register("/serviceworker.js");
-	}
-}
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
 	prepareInputs();
 	insertTime();
-	registerServiceWorker();
 });
