@@ -1,11 +1,9 @@
-"use strict";
-
 /**
  * @file
  * This file confgures html-validate.
  */
 
-module.exports = {
+export default {
 
 	extends: [
 		"@atjn/htmlvalidate-config",

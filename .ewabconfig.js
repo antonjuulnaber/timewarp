@@ -5,7 +5,7 @@
  */
 
 export default {
-  serviceworker: {
-	add: true,
-  }
-}
+	serviceworker: {
+		add: true,
+	},
+};

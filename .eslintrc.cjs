@@ -7,6 +7,11 @@
 
 module.exports = {
 
+  parserOptions: {
+    sourceType: "module",
+		ecmaVersion: "latest",
+  },
+
 	extends: [
 		"@atjn/eslint-config",
 	],
