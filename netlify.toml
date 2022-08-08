@@ -15,7 +15,7 @@
     Cross-Origin-Resource-Policy = "same-origin"
     Content-Security-Policy = """
       default-src 'none';
-      style-src 'self';
+      style-src 'self' 'unsafe-inline';
       script-src 'self';
       img-src 'self';
       manifest-src 'self';
