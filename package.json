@@ -4,12 +4,12 @@
     "@atjn/eslint-config": "^5.1.0",
     "@atjn/htmlvalidate-config": "^5.0.0",
     "@atjn/stylelint-config": "^3.0.0",
-    "easy-web-app-builder": "1.0.0-beta1",
-    "eslint": "^8.20.0",
-    "eslint-plugin-jsdoc": "^39.3.3",
-    "eslint-plugin-promise": "^6.0.0",
-    "html-validate": "^7.1.2",
-    "stylelint": "^14.9.1"
+    "easy-web-app-builder": "1.0.0-beta3",
+    "eslint": "^8.24.0",
+    "eslint-plugin-jsdoc": "^39.3.6",
+    "eslint-plugin-promise": "^6.0.1",
+    "html-validate": "^7.5.0",
+    "stylelint": "^14.12.1"
   },
   "scripts": {
     "lint:js": "eslint \"**/*.js\"",
