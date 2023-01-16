@@ -15,9 +15,7 @@
 </p>
 
 ## Disclaimer
-Timewarp uses experimental CSS features that are currently under heavy development in browsers. While the app definetely works, expect it to be buggy, and make sure you're keeping your browser up to date. I hope that the features will be standardised before the end of this year, which would mean the app would also become stable by the end of the year.
-
-I use this app every day, and i don't really expect anyone else to use it. If anyone wants to use it, and want to provide feedback or request features, feel free to do so, i'll definetely look into it :)
+I mostly use this app as a testing ground for new ideas. If anyone wants to actually use it, and wants to provide feedback or request features, feel free to do so, I'll definetely look into it :)
 
 ## Building
 This repo only contains source files. In order to build the final project files, the repo must be build with node.js:
