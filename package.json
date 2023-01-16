@@ -5,18 +5,18 @@
     "@atjn/htmlvalidate-config": "^5.0.0",
     "@atjn/stylelint-config": "^3.0.0",
     "easy-web-app-builder": "1.0.0-beta3",
-    "eslint": "^8.24.0",
-    "eslint-plugin-jsdoc": "^39.3.6",
-    "eslint-plugin-promise": "^6.0.1",
-    "html-validate": "^7.5.0",
-    "stylelint": "^14.12.1"
+    "eslint": "^8.32.0",
+    "eslint-plugin-jsdoc": "^39.6.4",
+    "eslint-plugin-promise": "^6.1.1",
+    "html-validate": "^7.13.1",
+    "stylelint": "^14.16.1"
   },
   "scripts": {
     "lint:js": "eslint \"**/*.js\"",
     "lint:css": "stylelint \"source/**/*.css\"",
     "lint:html": "html-validate \"source/**/*.html\"",
     "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
-    "test": "npm install && npm run lint",
+    "test": "npm run lint",
     "build": "npx easy-web-app-builder"
   }
 }
