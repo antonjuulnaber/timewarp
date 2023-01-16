@@ -12,16 +12,6 @@
   <a href="https://timewarp.atjn.dk">
     <img src="https://img.shields.io/website?url=https%3A%2F%2Ftimewarp.atjn.dk&label=Website&style=flat-square&logo=netlify" alt="Website status">
   </a>
-  <br>
-	<a href="https://github.com/atjn/timewarp/actions/workflows/code-quality.yml">
-		<img src="https://img.shields.io/github/workflow/status/atjn/timewarp/Code%20quality?style=flat-square&label=tests" alt="tests status">
-	</a>
-  <a href="https://lgtm.com/projects/g/atjn/timewarp/context:javascript">
-		<img src="https://img.shields.io/lgtm/grade/javascript/g/atjn/timewarp.svg?style=flat-square&logo=lgtm&label=security%20score" alt="lgtm js security score">
-	</a>
-  <a href="https://observatory.mozilla.org/analyze/timewarp.atjn.dk">
-    <img src="https://img.shields.io/mozilla-observatory/grade/timewarp.atjn.dk?publish&label=Observatory&style=flat-square&logo=mozilla" alt="MDN Observatory status">
-  </a>
 </p>
 
 ## Disclaimer
